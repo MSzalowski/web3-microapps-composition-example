@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import {
   Box,
@@ -10,12 +11,16 @@ import {
   Toolbar,
 } from "@mui/material";
 import { Web } from "@mui/icons-material";
+import { useNavigate } from "react-router-dom";
+
+import { navItems } from "@/constants";
 
 /**
  * A custom drawer component.
  * Renders a permanent drawer with a toolbar and a list of items.
  */
 export const Drawer = () => {
+  const navigate = useNavigate();
   return (
     <MuiDrawer
       variant="permanent"
@@ -31,9 +36,9 @@ export const Drawer = () => {
       <Toolbar role="toolbar" />
       <Box sx={{ overflow: "auto" }}>
         <List>
-          {["Wallet connect pillar", "Wallet addresses pillar"].map((text) => (
+          {navItems.map(({ path, text }) => (
             <ListItem key={text} disablePadding role="listitem">
-              <ListItemButton>
+              <ListItemButton onClick={() => navigate(path)}>
                 <ListItemIcon>
                   <Web />
                 </ListItemIcon>
