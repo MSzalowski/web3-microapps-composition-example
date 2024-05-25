@@ -14,6 +14,7 @@
     "@emotion/styled": "^11.11.5",
     "@mui/material": "^5.15.18",
     "@next-wrapper/design-system": "file:./packages/design-system",
+    "@next-wrapper/wallet": "file:./packages/wallet",
     "next": "14.2.3",
     "react": "^18",
     "react-dom": "^18"

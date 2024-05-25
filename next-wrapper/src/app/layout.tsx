@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 
 import { ThemeWrapper } from "@/components/ThemeWrapper";
+import { WalletWrapper } from "@/components/WalletWrapper";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -21,7 +22,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={poppins.className}>
-        <ThemeWrapper>{children}</ThemeWrapper>
+        <ThemeWrapper>
+          <WalletWrapper>{children}</WalletWrapper>
+        </ThemeWrapper>
       </body>
     </html>
   );
