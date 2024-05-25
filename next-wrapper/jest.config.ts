@@ -9,6 +9,7 @@ const config: Config = {
   transform: {
     "^.+\\.(ts|tsx)$": "ts-jest",
   },
+  testRegex: "(src/.*\\.test)\\.(ts|tsx)$",
   clearMocks: true,
   collectCoverage: true,
   coverageDirectory: "coverage",

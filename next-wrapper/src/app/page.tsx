@@ -1,11 +1,12 @@
 "use client";
 import React from "react";
+import { Box, Typography, Button } from "@mui/material";
 import { ChooseWalletDialog, useWallet } from "@next-wrapper/wallet";
 
 export default function Page() {
   // @next-wrapper/wallet does not provide type declarations
   // @ts-expect-error
-  const { connectWallet, disconnectWallet, walletApi } = useWallet();
+  const { connectWallet, walletApi } = useWallet();
   const [isWalletDialogOpen, setIsWalletDialogOpen] = React.useState(false);
 
   const handleWalletSelect = (walletName: string) => {
@@ -14,27 +15,32 @@ export default function Page() {
   };
 
   return (
-    <div
-      style={{
+    <Box
+      sx={{
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        height: "100vh",
       }}
     >
-      <div>
-        <h1>Web3 Next.js Wrapper</h1>
-        <p>{walletApi ? "Wallet is connected" : "Wallet is not connected"}</p>
-        <p>Wallet API: {JSON.stringify(walletApi, null, 2)}</p>
-        <button onClick={() => setIsWalletDialogOpen(true)}>
+      <Box sx={{ gap: 2, display: "flex", flexDirection: "column" }}>
+        <Typography variant="h4" sx={{ fontWeight: "bold" }}>
+          Web3 Next.js Wrapper
+        </Typography>
+        <Typography variant="body1">
+          {walletApi ? "Wallet is connected" : "Wallet is not connected"}
+        </Typography>
+        <Typography variant="body1">
+          Wallet API: {JSON.stringify(walletApi, null, 2)}
+        </Typography>
+        <Button onClick={() => setIsWalletDialogOpen(true)} variant="contained">
           {walletApi ? "Disconnect" : "Connect"}
-        </button>
-      </div>
+        </Button>
+      </Box>
       <ChooseWalletDialog
         isOpen={isWalletDialogOpen}
         onClose={() => setIsWalletDialogOpen(false)}
         onWalletSelect={handleWalletSelect}
       />
-    </div>
+    </Box>
   );
 }

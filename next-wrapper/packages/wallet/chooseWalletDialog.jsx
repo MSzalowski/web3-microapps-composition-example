@@ -17,26 +17,27 @@ export const ChooseWalletDialog = ({
   onClose,
   ...props
 }) => {
-  const walletOptions = React.useMemo(
-    () =>
-      Object.entries(window.cardano).reduce(
-        (acc, [walletName, walletOptions]) => {
-          if (
-            walletOptions.supportedExtensions?.some(
-              (extension) => extension.cip === 95
-            )
-          ) {
-            acc.push({
-              icon: walletOptions.icon,
-              name: walletName,
-            });
-          }
-          return acc;
-        },
-        []
-      ),
-    []
-  );
+  const [walletOptions, setWalletOptions] = React.useState([]);
+
+  React.useEffect(() => {
+    const options = Object.entries(window?.cardano).reduce(
+      (acc, [walletName, walletOptions]) => {
+        if (
+          walletOptions.supportedExtensions?.some(
+            (extension) => extension.cip === 95
+          )
+        ) {
+          acc.push({
+            icon: walletOptions.icon,
+            name: walletName,
+          });
+        }
+        return acc;
+      },
+      []
+    );
+    setWalletOptions(options);
+  }, [setWalletOptions]);
 
   return (
     <Dialog open={isOpen} onClose={onClose} {...props}>

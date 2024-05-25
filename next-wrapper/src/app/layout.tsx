@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
+import { Box, CssBaseline, Toolbar } from "@mui/material";
 import { Poppins } from "next/font/google";
 
 import { ThemeWrapper } from "@/components/ThemeWrapper";
 import { WalletWrapper } from "@/components/WalletWrapper";
+import { AppBar } from "@/components/AppBar";
+import { Drawer } from "@/components/Drawer";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -23,7 +26,17 @@ export default function RootLayout({
     <html lang="en">
       <body className={poppins.className}>
         <ThemeWrapper>
-          <WalletWrapper>{children}</WalletWrapper>
+          <WalletWrapper>
+            <Box sx={{ display: "flex" }}>
+              <CssBaseline />
+              <AppBar />
+              <Drawer />
+              <Box component="main" sx={{ flexGrow: 1, p: 4 }}>
+                <Toolbar />
+                {children}
+              </Box>
+            </Box>
+          </WalletWrapper>
         </ThemeWrapper>
       </body>
     </html>
