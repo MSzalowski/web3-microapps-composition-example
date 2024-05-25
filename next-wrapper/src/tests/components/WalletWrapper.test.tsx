@@ -1,7 +1,7 @@
 import React from "react";
 import { render, act, screen } from "@testing-library/react";
 import { WalletWrapper } from "@/components/WalletWrapper";
-import { useWallet } from "@next-wrapper/wallet";
+import { useWallet } from "../../../../packages/wallet";
 
 describe("WalletWrapper", () => {
   it("renders children components", () => {
