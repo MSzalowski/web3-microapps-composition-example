@@ -1,12 +1,22 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import { ThemeProvider } from "@mui/material";
+import { WalletProvider } from "@packages/wallet";
+import theme from "@packages/design-system";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
+import { BrowserRouter } from "react-router-dom";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <ThemeProvider theme={theme}>
+        <WalletProvider>
+          <App />
+        </WalletProvider>
+      </ThemeProvider>
+    </BrowserRouter>
   </React.StrictMode>
 );
 

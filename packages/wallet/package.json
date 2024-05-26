@@ -1,7 +1,7 @@
 {
-  "name": "@next-wrapper/wallet",
+  "name": "@packages/wallet",
   "version": "0.0.1",
-  "main": "index.jsx",
+  "main": "index.js",
   "scripts": {
     "test": "jest"
   },
@@ -10,7 +10,6 @@
     "@emotion/styled": "^11.11.5",
     "@emurgo/cardano-serialization-lib-asmjs": "^12.0.0-alpha.30",
     "@mui/material": "^5.15.18",
-    "@next-wrapper/design-system": "file:../design-system",
     "babel-jest": "^29.7.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"

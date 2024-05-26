@@ -14,17 +14,14 @@
     "@emotion/styled": "^11.11.5",
     "@mui/icons-material": "^5.15.18",
     "@mui/material": "^5.15.18",
-    "@next-wrapper/design-system": "file:../packages/design-system",
-    "@next-wrapper/wallet": "file:../packages/wallet",
+    "@pillars/wallet-connect-pillar": "file:../pillars/wallet-connect-pillar",
     "localforage": "^1.10.0",
     "match-sorter": "^6.3.4",
     "next": "14.2.3",
     "react": "^18",
     "react-dom": "^18",
     "react-router-dom": "^6.23.1",
-    "sort-by": "^1.2.0",
-    "wallet-connect-pillar": "file:../wallet-connect-pillar",
-    "wallet-addresses-pillar": "file:../wallet-addresses-pillar"
+    "sort-by": "^1.2.0"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^6.4.5",

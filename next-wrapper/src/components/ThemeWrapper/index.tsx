@@ -1,7 +1,7 @@
 "use client";
 import { PropsWithChildren } from "react";
 import { ThemeProvider } from "@mui/material/styles";
-import nextJSWrapperTheme from "../../../../packages/design-system";
+import nextJSWrapperTheme from "@packages/design-system";
 
 /**
  * Wraps the children components with a theme provider.

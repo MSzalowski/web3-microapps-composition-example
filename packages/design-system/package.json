@@ -1,5 +1,5 @@
 {
-  "name": "@next-wrapper/design-system",
+  "name": "@packages/design-system",
   "version": "0.0.1",
   "main": "index.js",
   "dependencies": {

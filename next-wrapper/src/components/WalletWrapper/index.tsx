@@ -1,6 +1,6 @@
 "use client";
 import { PropsWithChildren } from "react";
-import { WalletProvider } from "../../../../packages/wallet";
+import { WalletProvider } from "@packages/wallet";
 
 /**
  * Wraps the provided children with the WalletProvider component.
