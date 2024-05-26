@@ -3,6 +3,11 @@ import { Box, Typography, Button } from "@mui/material";
 import { ChooseWalletDialog, useWallet } from "@packages/wallet";
 import { Link, Route, Routes, useNavigate } from "react-router-dom";
 
+/**
+ * Renders the ChooseWalletRoute component.
+ * This component displays a button that opens a wallet modal and allows the user to connect their wallet.
+ * After connecting the wallet, it navigates to the "/wallet-api" route.
+ */
 const ChooseWalletRoute = () => {
   const navigate = useNavigate();
   const { connectWallet } = useWallet();
@@ -52,6 +57,12 @@ const ChooseWalletRoute = () => {
   );
 };
 
+/**
+ * Renders the WalletApiRoute component.
+ * This component displays information about the wallet API and provides navigation links.
+ *
+ * @returns {JSX.Element} The rendered WalletApiRoute component.
+ */
 const WalletApiRoute = () => {
   const { walletApi } = useWallet();
   return (

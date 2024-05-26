@@ -2,17 +2,15 @@
   "name": "@pillars/wallet-connect-pillar",
   "version": "0.1.0",
   "private": true,
-  "main": "src/App.js",
+  "main": "src/App.jsx",
   "scripts": {
     "start": "react-app-rewired start",
     "build": "react-app-rewired build",
-    "test": "react-app-rewired test",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
-      "react-app",
-      "react-app/jest"
+      "react-app"
     ]
   },
   "browserslist": {

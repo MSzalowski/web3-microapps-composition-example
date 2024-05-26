@@ -7,6 +7,12 @@
     "next-wrapper",
     "vite-react-wrapper"
   ],
+  "scripts": {
+    "start:next:wrapper": "npm run dev -w next-wrapper",
+    "start:vite:wrapper": "npm run dev -w vite-react-wrapper",
+    "start:pillar": "npm run start -w pillars/wallet-connect-pillar",
+    "test": "npm run test --workspaces --if-present"
+  },
   "dependencies": {
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",

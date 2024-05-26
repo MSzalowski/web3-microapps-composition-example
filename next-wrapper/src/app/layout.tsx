@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import dynamic from "next/dynamic";
 import { Box, CssBaseline, Toolbar } from "@mui/material";
 import { Poppins } from "next/font/google";
 
